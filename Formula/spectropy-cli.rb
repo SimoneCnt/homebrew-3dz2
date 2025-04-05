@@ -1,20 +1,26 @@
 class SpectropyCli < Formula
-  include Language::Python::Virtualenv
 
-  desc "Spectropy is a simple tool to view, compare and match Raman spectra of minerals."
-  homepage "https://github.com/SimoneCnt/spectropy"
-  url "https://github.com/SimoneCnt/spectropy/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "1d8af18b2647a943d9b26d8217653d74e3bb7deb27731e6a9aa1cf1146c3a09c"
-  license "GPL-3.0"
+    include Language::Python::Virtualenv
 
-  depends_on "python@3.13"
-  depends_on "python-tk@3.13"
+    desc "Spectropy is a simple tool to view, compare and match Raman spectra of minerals."
+    homepage "https://github.com/SimoneCnt/spectropy"
+    url "https://github.com/SimoneCnt/spectropy/archive/refs/tags/v2.0.1.tar.gz"
+    sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+    license "GPL-3.0"
+
+    depends_on "python@3.13"
+    depends_on "python-tk@3.13"
     depends_on "scipy"
 
-  resource "chardet" do
-    url "https://files.pythonhosted.org/packages/f3/0d/f7b6ab21ec75897ed80c17d79b15951a719226b9fababf1e40ea74d69079/chardet-5.2.0.tar.gz"
-    sha256 "1b3b6ff479a8c414bc3fa2c0852995695c4a026dcd6d0633b2dd092ca39c1cf7"
-  end
+    resource "chardet" do
+        url "https://files.pythonhosted.org/packages/f3/0d/f7b6ab21ec75897ed80c17d79b15951a719226b9fababf1e40ea74d69079/chardet-5.2.0.tar.gz"
+        sha256 "1b3b6ff479a8c414bc3fa2c0852995695c4a026dcd6d0633b2dd092ca39c1cf7"
+    end
+
+    resource "pyyaml" do
+        url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
+        sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
+    end
 
   #resource "contourpy" do
   #  url "https://files.pythonhosted.org/packages/25/c2/fc7193cc5383637ff390a712e88e4ded0452c9fbcf84abe3de5ea3df1866/contourpy-1.3.1.tar.gz"
@@ -66,35 +72,13 @@ class SpectropyCli < Formula
   #  sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
   #end
 
-  resource "pyyaml" do
-    url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
-    sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
-  end
-
-  #resource "scipy" do
-  #  url "https://files.pythonhosted.org/packages/b7/b9/31ba9cd990e626574baf93fbc1ac61cf9ed54faafd04c479117517661637/scipy-1.15.2.tar.gz"
-  #  sha256 "cd58a314d92838f7e6f755c8a2167ead4f27e1fd5c1251fd54289569ef3495ec"
-  #end
-
   #resource "six" do
   #  url "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz"
   #  sha256 "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
   #end
 
-  def install
-    virtualenv_install_with_resources
-  end
+    def install
+        virtualenv_install_with_resources
+    end
 
-  #test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test spectropy`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system bin/"program", "do", "something"`.
-    #system "false"
-  #end
 end
