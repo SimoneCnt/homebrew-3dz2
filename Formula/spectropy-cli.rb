@@ -4,13 +4,15 @@ class SpectropyCli < Formula
 
     desc "Spectropy is a simple tool to view, compare and match Raman spectra of minerals."
     homepage "https://github.com/SimoneCnt/spectropy"
-    url "https://github.com/SimoneCnt/spectropy/archive/refs/tags/v2.0.1.tar.gz"
-    sha256 "2046f673b7a4bdb03f307e9378d7026d6dcf6ef290efd26b98dc64639e5f7606"
+    url "https://github.com/SimoneCnt/spectropy/archive/refs/tags/v2.0.2.tar.gz"
+    sha256 "44d3a089984d2bf88c7d0cf0dde256064be15257cf4758689f19ce7d6a3eaf34"
     license "GPL-3.0"
 
     depends_on "python@3.13"
     depends_on "python-tk@3.13"
     depends_on "scipy"
+    depends_on "python-matplotlib"
+    depends_on "numpy"
 
     resource "chardet" do
         url "https://files.pythonhosted.org/packages/f3/0d/f7b6ab21ec75897ed80c17d79b15951a719226b9fababf1e40ea74d69079/chardet-5.2.0.tar.gz"
@@ -40,16 +42,6 @@ class SpectropyCli < Formula
   #resource "kiwisolver" do
   #  url "https://files.pythonhosted.org/packages/82/59/7c91426a8ac292e1cdd53a63b6d9439abd573c875c3f92c146767dd33faf/kiwisolver-1.4.8.tar.gz"
   #  sha256 "23d5f023bdc8c7e54eb65f03ca5d5bb25b601eac4d7f1a042888a1f45237987e"
-  #end
-
-  #resource "matplotlib" do
-  #  url "https://files.pythonhosted.org/packages/2f/08/b89867ecea2e305f408fbb417139a8dd941ecf7b23a2e02157c36da546f0/matplotlib-3.10.1.tar.gz"
-  #  sha256 "e8d2d0e3881b129268585bf4765ad3ee73a4591d77b9a18c214ac7e3a79fb2ba"
-  #end
-
-  #resource "numpy" do
-  #  url "https://files.pythonhosted.org/packages/e1/78/31103410a57bc2c2b93a3597340a8119588571f6a4539067546cb9a0bfac/numpy-2.2.4.tar.gz"
-  #  sha256 "9ba03692a45d3eef66559efe1d1096c4b9b75c0986b5dff5530c378fb8331d4f"
   #end
 
   #resource "packaging" do
