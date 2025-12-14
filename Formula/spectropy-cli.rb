@@ -4,8 +4,8 @@ class SpectropyCli < Formula
 
     desc "Spectropy is a simple tool to view, compare and match Raman spectra of minerals."
     homepage "https://github.com/SimoneCnt/spectropy"
-    url "https://github.com/SimoneCnt/spectropy/archive/refs/tags/v2.0.2.tar.gz"
-    sha256 "44d3a089984d2bf88c7d0cf0dde256064be15257cf4758689f19ce7d6a3eaf34"
+    url "https://github.com/SimoneCnt/spectropy/archive/refs/tags/v2.0.3.tar.gz"
+    sha256 "c1f94b1d57fe475911136011c5e2eb9ae070ff1ece999c250aeece8092c4f6d0"
     license "GPL-3.0"
 
     depends_on "python@3.13"
